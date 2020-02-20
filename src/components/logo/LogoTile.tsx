@@ -10,7 +10,12 @@ const LogoTile: React.FC<TileProps> = props => {
     <img
       src={require(`../../assets/logo/CCO_${props.tileName}.png`)}
       alt="logo"
-      style={{ marginRight: 20 }}
+      style={{
+        marginRight: "1em",
+        height: "167px",
+        width: "144px",
+        cursor: "pointer"
+      }}
     />
   );
 };

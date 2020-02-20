@@ -21,37 +21,74 @@ const Logo = () => {
 
   const firstRow = ["Club", "members"];
   const secondRow = ["security", "Logo", "cloud"];
+  const thirdRow = ["rendering", "Gaming"];
   return (
-    <LogoContainer>
-      <FirstRow>
-        {firstRow.map(tileName => (
-          <LogoTile tileName={tileName} />
+    <Container>
+      <EvenRow>
+        {firstRow.map(tile => (
+          <Hex tileName={tile} />
         ))}
-      </FirstRow>
-      <SecondRow>
-        {secondRow.map(tileName => (
-          <LogoTile tileName={tileName} />
+      </EvenRow>
+      <OddRow>
+        {secondRow.map(tile => (
+          <Hex tileName={tile} />
         ))}
-      </SecondRow>
-    </LogoContainer>
+      </OddRow>
+      <EvenRow>
+        {thirdRow.map(tile => (
+          <Hex tileName={tile} />
+        ))}
+      </EvenRow>
+    </Container>
   );
 };
 
-const LogoContainer = styled.div`
-  width: 710px;
-  margin-left: 50px;
+const tileWidth = 167;
+
+const Container = styled.div`
+  width: 780px;
+  line-height: 1.3;
 `;
 
-const FirstRow = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: -38.5px;
+const EvenRow = styled.ol`
+  position: relative;
+  left: ${tileWidth / 2.1}px;
 `;
 
-const SecondRow = styled.div`
-  width: 100%;
-  display: flex;
+const OddRow = styled.ol`
+  position: relative;
+  margin-top: -6.5%;
+  margin-bottom: -6.5%;
+`;
+
+const Hex = styled(LogoTile)<{ tileName: string }>`
+  position: relative;
+  margin: 1em auto;
+  width: ${tileWidth}px;
+  height: ${tileWidth * 1.7}px;
+
+  display: inline-block;
+  margin-right: ${tileWidth / 1.3}px;
+  transition: all 150ms ease-in-out;
+  &:before {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+  }
+  &:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+  }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default Logo;
