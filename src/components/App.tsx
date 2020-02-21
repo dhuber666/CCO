@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "./logo";
+import Home from "../screens/Home";
 
 function App() {
-  return <Logo />;
+  return <Home />;
 }
 
 export default App;

@@ -45,10 +45,7 @@ const Logo = () => {
 
 const tileWidth = 167;
 
-const Container = styled.div`
-  width: 780px;
-  line-height: 1.3;
-`;
+const Container = styled.div``;
 
 const EvenRow = styled.ol`
   position: relative;
