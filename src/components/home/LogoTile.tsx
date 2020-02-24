@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface TileProps {
   tileName: string;
@@ -18,18 +19,21 @@ const LogoTile: React.FC<TileProps> = props => {
   };
 
   return (
-    <img
-      src={getAssetPathFromTileName()}
-      alt="logo"
-      onMouseOver={e => (e.currentTarget.src = getAssetPathFromTileName(true))}
-      onMouseOut={e => (e.currentTarget.src = getAssetPathFromTileName())}
-      style={{
-        marginRight: "1em",
-        height: "167px",
-        width: "144px",
-        cursor: "pointer"
-      }}
-    />
+    <Link to={`/${props.tileName}`} >
+      <img
+        src={getAssetPathFromTileName()}
+        alt="logo"
+
+        onMouseOver={e => (e.currentTarget.src = getAssetPathFromTileName(true))}
+        onMouseOut={e => (e.currentTarget.src = getAssetPathFromTileName())}
+        style={{
+          marginRight: "1em",
+          height: "167px",
+          width: "144px",
+          cursor: "pointer"
+        }}
+      />
+    </Link >
   );
 };
 

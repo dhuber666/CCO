@@ -3,7 +3,8 @@ import Logo from "../components/home";
 import Header from "../components/home/Header";
 import styled from "styled-components";
 
-const Home = () => {
+
+const HomeScreen = () => {
   return (
     <Container>
       <Header />
@@ -51,4 +52,4 @@ const SubTitle = styled.h4`
   font-family: "Gobold";
 `;
 
-export default Home;
+export default HomeScreen;
