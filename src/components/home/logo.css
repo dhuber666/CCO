@@ -1,0 +1,51 @@
+svg {
+    /* sizing it down just so it's not massive */
+    /* you can make an svg responsive by keeping its viewBox attribute */
+    /* and removing the width and height attributes */
+    max-width: 600px;
+    max-height: 600px;
+    display: inline-block;
+    
+  }
+  
+  /* cloud hover */
+  svg .cloud:hover path[class^="prefix__st"]:not(.prefix__st0),
+  svg .cloud:focus path[class^="prefix__st"]:not(.prefix__st0) {
+    fill: #0088C2;
+  }
+  
+  /* members hover */
+  svg .members:hover path[class^="prefix__st"]:not(.prefix__st0),
+  svg .members:focus path[class^="prefix__st"]:not(.prefix__st0) {
+    fill: orange;
+  }
+  
+  /* club hover */
+  svg .club:hover path[class^="prefix__st"]:not(.prefix__st0),
+  svg .club:focus path[class^="prefix__st"]:not(.prefix__st0) {
+    fill: yellow;
+  }
+  
+  /* security hover */
+  svg .security:hover path[class^="prefix__st"]:not(.prefix__st0),
+  svg .security:focus path[class^="prefix__st"]:not(.prefix__st0) {
+    fill: green;
+  }
+  
+  /* rendering hover */
+  svg .rendering:hover path[class^="prefix__st"]:not(.prefix__st0),
+  svg .rendering:focus path[class^="prefix__st"]:not(.prefix__st0) {
+    fill: blue;
+  }
+  
+  /* gaming hover */
+  svg .gaming:hover path[class^="prefix__st"]:not(.prefix__st0),
+  svg .gaming:focus path[class^="prefix__st"]:not(.prefix__st0) {
+    fill: indigo;
+  }
+  
+  /* cco hover */
+  svg .cco:hover path[class^="prefix__st"]:not(.prefix__st0),
+  svg .cco:focus path[class^="prefix__st"]:not(.prefix__st0) {
+    fill: violet;
+  }

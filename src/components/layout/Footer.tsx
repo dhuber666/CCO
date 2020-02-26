@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const Header = () => {
-  return (
-    <Container>
-      <HeaderText>IMPRESSUM | DATENSCHUTZ</HeaderText>
-    </Container>
-  );
+const Footer = () => {
+    return (
+        <Container>
+            <FooterText>IMPRESSUM | DATENSCHUTZ</FooterText>
+        </Container>
+    );
 };
 
 const Container = styled.div`
   display: flex;
   position: absolute;
   right: 40px;
-  top: 0;
+  bottom: 40px;
 `;
 // Make this a <Link> from React Router in Future
-const HeaderText = styled.a`
+const FooterText = styled.a`
   font-size: 18px;
   font-weight: bold;
   color: #999999;
@@ -24,4 +24,4 @@ const HeaderText = styled.a`
   cursor: pointer;
 `;
 
-export default Header;
+export default Footer;

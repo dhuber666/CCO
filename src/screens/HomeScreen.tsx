@@ -1,46 +1,52 @@
 import React from "react";
-import Logo from "../components/home";
-import Header from "../components/home/Header";
 import styled from "styled-components";
-
+import { Grid } from "@material-ui/core";
 
 const HomeScreen = () => {
   return (
-    <Container>
-      <Header />
-      <LogoAndTitleContainer>
-        <Logo />
+    <Grid item md={8} xs={12}>
+      <Container>
+
+
         <TitleContainer>
           <Title>Computer Club Ottensheim</Title>
-          <SubTitle>Subheadline Subheadline Subheadline</SubTitle>
+          <SubTitle>Subheadline</SubTitle>
         </TitleContainer>
-      </LogoAndTitleContainer>
-    </Container>
+
+      </Container>
+    </Grid>
   );
 };
 
 const Container = styled.div`
-  padding: 20px;
+  
+  display: inline-block;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 1;
+  
 `;
 
-const LogoAndTitleContainer = styled.div`
-  display: flex;
-  margin-top: 10%;
-`;
+
 
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 8%;
+  
+ 
 `;
 
 const Title = styled.h1`
   font-size: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
   font-weight: bold;
   color: #008d36;
   text-align: center;
   margin: 0;
   font-family: "Gobold";
+  
 `;
 
 const SubTitle = styled.h4`
